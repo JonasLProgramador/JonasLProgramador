@@ -37,7 +37,8 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/JonasLProgramador/JonasLeiteProgramador/output/snake.svg" alt="Animação Snake" />
+<img src="https://raw.githubusercontent.com/JonasLProgramador/JonasLProgramador/output/snake.svg" alt="Snake animation" />
+
 
 ###
 <br>
