@@ -7,9 +7,9 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=JonasLProgramador&color=blue" alt="Visualizações do perfil"/> <p>
 
-- 🔭 Atualmente estou aprendendo coisas novas e cursando programação full stack no Programadores do Amanhã.
+- 🔭 Atualmente estou aprendendo coisas novas e cursando Analises e desenvolvimento de sistemas.
 
-- 🌱 Atualmente estou aprendendo React.
+- 🌱 Atualmente estou aprendendo  typescript.
 
 - 👯 Estou procurando colaborar em projetos de pesquisa e ensino para empresas.
 
