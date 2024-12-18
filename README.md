@@ -1,13 +1,9 @@
 
 
 
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=36BCF7FF&random=false&width=435&height=35&lines=+Seja+bem+vindo(a)!;Sou+Jonas,+muito+prazer!;)](https://git.io/typing-svg)
 ![Texto do seu parágrafo](https://github.com/user-attachments/assets/3abd7ae4-3edb-46b6-ba0c-d4ab7f36da96)
-
-
-
-## <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"> Eaí?! sinta-se livre para visualizar meus códigos!.
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=36BCF7FF&random=false&width=435&height=35&lines=Meu+nome+é+Jonas+Leite!;Sou+um+desenvolvedor+Full+Stack!;Tenho+20+anos!;)](https://git.io/typing-svg)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=JonasLProgramador&color=blue" alt="Visualizações do perfil"/> <p>
 
@@ -62,3 +58,6 @@
   <a href="mailto:jonas.programador01@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%231877F2?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
   <a href="https://www.linkedin.com/in/jonas-leite-perfil/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%231877F2?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 </div>
+
+![banner](https://github.com/user-attachments/assets/417e026a-4952-4888-a553-8c2ec8885a20)
+
