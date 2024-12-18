@@ -12,7 +12,8 @@
 
 - 🌱 $${\color{#38b6ff}Atualmente \space estou \space aprendendo \space  React \space e \space Java.}$$ 
 
-- 🌠 $${\color{#38b6ff}Estou \space sempre \space procurando \space novos \space aprendizados! \space!}$$ 
+- 🌠 $${\color{#38b6ff} Sempre \space em \space busca \space de \space novas \space oportunidades \space para \space aprender \space e \space impactar!}$$
+
 - 👯 $${\color{#38b6ff}Me \space pergunte \space sobre \space  qualquer \space coisa. \space Estou \space sempre \space aberto\space a \space novos \space aprendizados!}$$
 
 
