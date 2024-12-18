@@ -2,8 +2,8 @@ name: Generate snake animation
 
 on:
   schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
+   - cron: "0 */24 * * *" 
+   
   workflow_dispatch:
 
   push:
@@ -22,7 +22,7 @@ jobs:
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: 
+          outputs: |
              dist/snake.svg?palette=github-dark
              dist/ocean.gif?color_snake=#38b6ff&color_dots=#36a7d8,#f2f2f2,#ff8c00,#011c27,#00ffcc
 
