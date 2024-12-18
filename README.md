@@ -1,7 +1,11 @@
-##
 
 
-## <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"> Olá! Bem-vindo ao meu perfil do GitHub.
+
+![Texto do seu parágrafo](https://github.com/user-attachments/assets/3abd7ae4-3edb-46b6-ba0c-d4ab7f36da96)
+
+
+
+## <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" width="30px"> Eaí?! sinta-se livre para visualizar meus códigos!.
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=36BCF7FF&random=false&width=435&height=35&lines=Meu+nome+é+Jonas+Leite!;Sou+um+desenvolvedor+Full+Stack!;Tenho+20+anos!;)](https://git.io/typing-svg)
 
