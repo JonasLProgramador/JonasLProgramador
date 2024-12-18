@@ -18,16 +18,25 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: generate github-contribution-grid-snake.svg
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev
+          npm install canvas
+
+      - name: Generate GitHub contribution grid snake
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-             dist/snake.svg?palette=github-dark
-             dist/ocean.gif?color_snake=#38b6ff&color_dots=#36a7d8,#f2f2f2,#ff8c00,#011c27,#00ffcc
+            dist/snake.svg?palette=github-dark
+            dist/ocean.gif?color_snake=#38b6ff&color_dots=#36a7d8,#f2f2f2,#ff8c00,#011c27,#00ffcc
 
-
-      - name: push github-contribution-grid-snake.svg to the output branch
+      - name: Push GitHub contribution grid snake to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
