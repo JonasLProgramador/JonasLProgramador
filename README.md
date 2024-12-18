@@ -1,4 +1,9 @@
+<div align="right">
+<a href="https://github.com/JonasLProgramador/JonasLProgramador/blob/main/README-EN.md"><img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="50px"></a>
+</div>
+
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=36BCF7FF&random=false&width=435&height=35&lines=Eaí!?+Seja+bem+vindo(a)!;Sou+Jonas,+muito+prazer!;)](https://git.io/typing-svg)
+
 ![Texto do seu parágrafo](https://github.com/user-attachments/assets/3abd7ae4-3edb-46b6-ba0c-d4ab7f36da96)
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=JonasLProgramador&color=blue" alt="Visualizações do perfil"/> <p>
