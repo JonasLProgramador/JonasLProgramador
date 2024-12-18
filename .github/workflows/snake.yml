@@ -1,21 +1,19 @@
 name: Generate snake animation
 
 on:
-  schedule: # execute every 12 hours
-   - cron: "0 */24 * * *" 
-   
+  schedule:
+    - cron: "0 */24 * * *" # execute every 24 hours
   workflow_dispatch:
-
   push:
     branches:
-    - master
+      - master
 
 jobs:
   generate:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
 
     steps:
       - name: Set up Node.js
@@ -23,9 +21,10 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install dependencies
+      - name: Install dependencies for canvas
         run: |
-          sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev
+          sudo apt-get update
+          sudo apt-get install -y libcairo2-dev libjpeg8-dev libpango1.0-dev
           npm install canvas
 
       - name: Generate GitHub contribution grid snake
