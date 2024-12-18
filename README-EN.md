@@ -40,7 +40,11 @@
 
 ###
 
-<img src="https://raw.githubusercontent.com/JonasLProgramador/JonasLProgramador/output/snake.svg" alt="Snake animation" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/JonasLProgramador/JonasLProgramador/blob/output/github-contribution-grid-snake.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/JonasLProgramador/JonasLProgramador/blob/output/github-contribution-grid-snake.svg" />
+  <img alt="github-snake" src="https://github.com/JonasLProgramador/JonasLProgramador/blob/output/github-contribution-grid-snake.svg" />
+</picture>
 
 ###
 
