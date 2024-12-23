@@ -1,20 +1,23 @@
 name: GitHub City
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Executar manualmente
 
 jobs:
   github-city:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3  # Garante que o repositório esteja acessível
+
       - name: Generate GitHub City visualization
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.skyline.city.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          filename: output/metrics.plugin.skyline.city.svg  # Define a pasta de saída "output"
+          token: NOT_NEEDED  # Sem necessidade de token
           base: ""
           plugin_skyline: yes
-          plugin_skyline_year: default
+          plugin_skyline_year: 2024  # Ano que você quer exibir
           plugin_skyline_frames: 6
           plugin_skyline_quality: 1
           plugin_skyline_settings: |
@@ -24,3 +27,12 @@ jobs:
               "wait": 4,
               "hide": ".github-corner, .footer-link, .buttons-options, .mobile-rotate, .display-info span:first-child"
             }
+
+      - name: Commit and push visualization to repository
+        uses: stefanzweifel/push-action@v5  # Envia a imagem para o repositório
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use o token para esta ação (não para o plugin)
+          branch: main  # Ou a branch que você deseja
+          force: true
+          commit_message: "Add GitHub City visualization"
+          files: output/metrics.plugin.skyline.city.svg  # Arquivo gerado que será enviado
