@@ -1,0 +1,46 @@
+name: Generate metrics
+
+on:
+  # Atualiza automaticamente todos os dias
+  schedule:
+    - cron: "0 0 * * *"
+  
+  # Permite executar manualmente
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Verifica o repositório
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Baixa e executa o Metrics
+      - name: Setup Metrics
+        uses: lowlighter/metrics@latest
+        with:
+          # Substitua "JonasLProgramador" pelo seu nome de usuário no GitHub
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: JonasLProgramador
+          template: classic
+          base: header, activity, community, repositories, skyline
+          config_timezone: America/Sao_Paulo
+          
+          # Configuração do plugin Skyline com ano dinâmico
+          plugin_skyline: yes
+          plugin_skyline_frames: 60
+          plugin_skyline_rolling: 2
+
+      # Salva e publica no repositório
+      - name: Commit and push results
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          mv metrics.svg skyline.svg
+          git add skyline.svg
+          git commit -m "Atualizar GitHub Skyline" || echo "Nada a atualizar"
+          git push
