@@ -1,46 +1,26 @@
-name: Generate metrics
+name: GitHub City
 
 on:
-  # Atualiza automaticamente todos os dias
-  schedule:
-    - cron: "0 0 * * *"
-  
-  # Permite executar manualmente
   workflow_dispatch:
 
 jobs:
-  build:
+  github-city:
     runs-on: ubuntu-latest
-
     steps:
-      # Verifica o repositório
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      # Baixa e executa o Metrics
-      - name: Setup Metrics
+      - name: Generate GitHub City visualization
         uses: lowlighter/metrics@latest
         with:
-          # Substitua "JonasLProgramador" pelo seu nome de usuário no GitHub
+          filename: metrics.plugin.skyline.city.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-          user: JonasLProgramador
-          template: classic
-          base: header, activity, community, repositories, skyline
-          config_timezone: America/Sao_Paulo
-          
-          # Configuração do plugin Skyline com ano dinâmico
+          base: ""
           plugin_skyline: yes
-          plugin_skyline_frames: 60
-          plugin_skyline_rolling: 2
-
-      # Salva e publica no repositório
-      - name: Commit and push results
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          mv metrics.svg skyline.svg
-          git add skyline.svg
-          git commit -m "Atualizar GitHub Skyline" || echo "Nada a atualizar"
-          git push
+          plugin_skyline_year: default
+          plugin_skyline_frames: 6
+          plugin_skyline_quality: 1
+          plugin_skyline_settings: |
+            {
+              "url": "https://honzaap.github.io/GithubCity?name=${login}&year=${year}",
+              "ready": "[...document.querySelectorAll('.display-info span')].map(span => span.innerText).includes('${login}')",
+              "wait": 4,
+              "hide": ".github-corner, .footer-link, .buttons-options, .mobile-rotate, .display-info span:first-child"
+            }
