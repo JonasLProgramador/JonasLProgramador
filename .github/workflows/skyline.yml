@@ -28,11 +28,21 @@ jobs:
               "hide": ".github-corner, .footer-link, .buttons-options, .mobile-rotate, .display-info span:first-child"
             }
 
-      - name: Commit and push visualization to repository
-        uses: stefanzweifel/push-action@v5  # Envia a imagem para o repositório
+      - name: Commit and push the GitHub City visualization to the repository
+        uses: actions/github-script@v6
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use o token para esta ação (não para o plugin)
-          branch: main  # Ou a branch que você deseja
-          force: true
-          commit_message: "Add GitHub City visualization"
-          files: output/metrics.plugin.skyline.city.svg  # Arquivo gerado que será enviado
+          script: |
+            const fs = require('fs');
+            const path = './output/metrics.plugin.skyline.city.svg';
+            
+            const content = fs.readFileSync(path, 'utf8');
+            const { execSync } = require('child_process');
+            
+            execSync('git config --global user.name "github-actions[bot]"');
+            execSync('git config --global user.email "github-actions[bot]@users.noreply.github.com"');
+            execSync('git add .');
+            execSync('git commit -m "Add GitHub City visualization"');
+            execSync('git push');
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Necessário para realizar o push
+
