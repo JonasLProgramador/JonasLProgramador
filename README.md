@@ -7,6 +7,7 @@
 ![Texto do seu parágrafo](https://github.com/user-attachments/assets/3abd7ae4-3edb-46b6-ba0c-d4ab7f36da96)
 [![](https://visitcount.itsvg.in/api?id=JonasLProgramador&icon=7&color=1)](https://visitcount.itsvg.in)
   
+
 - 🔭 $${\color{#38b6ff}Em\space  busca \space de \space novos \space desafios \space   e \space cursando \space Análises \space e \space Desenvolvimento \space de \space Sistemas.}$$ 
 
 - 🌱 $${\color{#38b6ff}Atualmente \space estou \space aprendendo \space  React \space e \space Java.}$$ 
